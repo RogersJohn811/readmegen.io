@@ -35,7 +35,24 @@ async function getUserInput() {
             message: "Testing instructions: ",
             name: "test",
         },
+        {
+
+        },
+        {
+            type: "input",
+            message: "Enter your email address: ",
+            name: "email",
+        },
+        {
+            type: "input",
+            message: "Enter your Github username: ",
+            name: "Github",
+        },
 
         ]);
+        return data;
+    } catch (error){
+        console.log(err) 
     }
 }
+
