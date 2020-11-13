@@ -36,7 +36,12 @@ async function getUserInput() {
             name: "test",
         },
         {
-
+            type: "list",
+                message: "Choose a license: ",
+                name: "licenses",
+                choices: [
+                   
+                ]
         },
         {
             type: "input",
@@ -56,3 +61,20 @@ async function getUserInput() {
     }
 }
 
+async function writeReadMe() {
+
+    const {
+        name,
+        description,
+        installation,
+        usage,
+        contribution,
+        test,
+        licenses,
+        email,
+        github
+    } = await getUserInput();
+
+    const lic = lics.getLicense(licenses);
+
+    
