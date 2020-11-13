@@ -40,7 +40,10 @@ async function getUserInput() {
                 message: "Choose a license: ",
                 name: "licenses",
                 choices: [
-                   
+                   "MIT License",
+                   "Apache License 2.0",
+                   "Boost Software License 1.0",
+                   "Mozilla Public License 2.0"
                 ]
         },
         {
@@ -77,4 +80,45 @@ async function writeReadMe() {
 
     const lic = lics.getLicense(licenses);
 
-    
+    const myMarkdown =
+    `
+# ${name}
+
+## License
+${lic} | This app is licensed under ${licenses}
+
+## Table of Contents
+- [Licensing Information](#License)
+- [Description](#Description)
+- [Usage](#Usage)
+- [Contribution](#Contribution)
+- [Tests](#Tests)
+- [Questions](#Questions)
+
+## Description
+${description}
+
+## Installation
+${installation}
+
+## Usage
+${usage}
+
+## Contribution
+${contribution}
+
+## Tests
+${test}
+
+## Questions
+[Send me an email](mailto:${email})
+
+[Visit my Github profile](https://github.com/${github})
+`
+
+fs.writeFile("./generated-file/README.md", myMarkdown, (err) =>
+    err ? console.log(err) : console.log("ReadMe.md created successfully!")
+);
+}
+
+writeReadMe();
