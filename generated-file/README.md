@@ -13,7 +13,7 @@
 - [Questions](#Questions)
 
 ## Description
-tets
+test
 
 ## Installation
 test
@@ -28,6 +28,6 @@ undefined
 test
 
 ## Questions
-[Send me an email](mailto:test)
+[Send me an email](mailto:example@gmail.com)
 
 [Visit my Github profile](https://github.com/undefined)
