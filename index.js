@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const license = require('./licenses');
+const lics = require('./licenses');
 
 async function getUserInput() {
 
